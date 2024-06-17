@@ -38,7 +38,7 @@ export default function Layout() {
 
       {shop === undefined && productId === undefined && <Homepage />}
       { productId && <Product id={productId} store={store} add={addtoCart} />}
-      {!['women', 'men', 'jewelry'].includes(shop) && <ErrorPage />}
+      {!['women', 'men', 'jewelry'].includes(shop) && shop !== undefined && <ErrorPage />}
       { ['women', 'men', 'jewelry'].includes(shop) && (
         <Shop name={shop} store={store} add={addtoStore} />
       )}
