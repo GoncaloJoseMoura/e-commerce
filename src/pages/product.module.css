@@ -1,0 +1,164 @@
+.page {
+  min-height: calc(100vh - 104px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.productImage {
+  width: 640px;
+
+  img {
+    width: 640px;
+    height: auto;
+    max-height: 700px;
+  }
+}
+
+.productDescription {
+  ul {
+    list-style: none;
+    padding: 0px 40px;
+
+    li {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    width: 70%;
+  }
+}
+
+.description {
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  grid-template-rows: 40px;
+  gap: 5px;
+
+  button {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #2f2f2f;
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #2f2f2f;
+    border: none;
+    color: #ffffff;
+  }
+}
+
+.units {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  div {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    width: 21px;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  div:focus,
+  div:hover {
+    border: 1px solid #2f2f2f;
+  }
+}
+
+.addCart {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    width: 60%;
+    padding: 5px 0px;
+    border: none;
+    background-color: #2f2f2f;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 300ms ease-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+}
+
+.garantee {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    p {
+      color: #838181;
+    }
+  }
+}
+
+.failed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 104px);
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  margin-top: 50px;
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #2f2f2f;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}

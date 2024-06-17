@@ -9,7 +9,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', 'package.json', 'package-lock.json', 'vite.config.ts', 'tailwind.config.js'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', 'package.json', 'package-lock.json', 'vite.config.ts'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],

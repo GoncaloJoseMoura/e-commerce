@@ -1,22 +1,19 @@
-import { elementType } from 'prop-types';
-import App from './App';
-import Profile from './Profile';
 import ErrorPage from './ErrorPage';
-import About from './About';
+import Layout from './Layout';
 
 const routes = [
   {
     path: '/',
-    element: <App />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
   },
   {
-    path: 'about',
-    element: <About />,
+    path: '/:shop',
+    element: <Layout />,
   },
   {
-    path: 'profile/:name',
-    element: <Profile />,
+    path: '/product/:productId',
+    element: <Layout />,
   },
 ];
 
